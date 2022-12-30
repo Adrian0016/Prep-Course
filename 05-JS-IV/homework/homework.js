@@ -21,7 +21,7 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  objeto.property = null;
+  objeto[property] = null;
   return objeto;
 }
 
@@ -30,7 +30,7 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto.metodo();
+  objeto[metodo()];
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -46,7 +46,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto.unaPropiedad;
+  delete objeto[unaPropiedad];
   return objeto;
 }
 
@@ -78,7 +78,7 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto.propiedad) {
+  if (objeto[propiedad]) {
     return true;
   } else {
     return false;
@@ -106,7 +106,7 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
-  usuario.amigos = amigos.push(nuevoAmigo);
+  usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
 
